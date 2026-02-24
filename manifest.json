@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Subscriptions Filter",
+  "version": "0.1.0",
+  "description": "Adds custom filters to hide lives from YouTube subscriptions feed.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "exclude_matches": [
+        "https://www.youtube.com/watch*",
+        "https://www.youtube.com/shorts/*",
+        "https://www.youtube.com/results*",
+        "https://www.youtube.com/playlist*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
