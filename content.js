@@ -135,6 +135,20 @@
 
       #${CONTROL_ID} .yt-subscriptions-filter-chip {
         cursor: pointer;
+        appearance: none !important;
+        border: 0 !important;
+        border-radius: 10px !important;
+        background: var(--yt-spec-badge-chip-background, #f2f2f2) !important;
+        color: var(--yt-spec-text-primary, #0f0f0f) !important;
+        min-height: 32px;
+        padding: 0 14px !important;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-family: Roboto, Arial, sans-serif;
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 1;
         white-space: nowrap;
         min-width: max-content;
         max-width: none !important;
@@ -143,8 +157,10 @@
         text-overflow: clip !important;
       }
 
+      #${CONTROL_ID} .yt-subscriptions-filter-chip *,
       #${CONTROL_ID} .yt-subscriptions-filter-chip .yt-spec-button-shape-next__button-text-content,
       #${CONTROL_ID} .yt-subscriptions-filter-chip .yt-core-attributed-string {
+        color: inherit !important;
         overflow: visible !important;
         text-overflow: clip !important;
         white-space: nowrap !important;
@@ -161,12 +177,14 @@
       }
 
       html[dark] #${CONTROL_ID} .yt-subscriptions-filter-chip {
+        background: #272727 !important;
+        color: #f1f1f1 !important;
         filter: none;
       }
 
       html[dark] #${CONTROL_ID} .yt-subscriptions-filter-chip.is-active {
-        background: var(--yt-spec-static-brand-white, #fff);
-        color: var(--yt-spec-static-brand-black, #0f0f0f);
+        background: #f1f1f1 !important;
+        color: #0f0f0f !important;
       }
 
       html[dark] #${CONTROL_ID} .yt-subscriptions-filter-chip:hover {
